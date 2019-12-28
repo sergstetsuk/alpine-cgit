@@ -1,0 +1,116 @@
+#####css=/cgit/cgit.css
+#####logo=/cgit/cgit.png
+#####scan-path=/var/lib/git
+#####enable-git-config=1
+
+#
+# cgit config
+# see cgitrc(5) for details
+
+cache-size=1000
+
+css=/cgit/cgit.css
+logo=/cgit/cgit.png
+
+# Show extra links for each repository on the index page
+enable-index-links=1
+
+# Enable ASCII art commit history graph on the log pages
+enable-commit-graph=1
+
+# Show number of affected files per commit on the log pages
+enable-log-filecount=1
+
+# Show number of added/removed lines per commit on the log pages
+enable-log-linecount=1
+
+# show number of tags
+summary-tags=10
+
+# side by side diffs instead of unified
+side-by-side-diffs=1
+
+# Enable statistics per week, month and quarter
+max-stats=week
+
+# Set the title and heading of the repository index page
+root-title=cgit
+
+# Set a subheading for the repository index page
+root-desc=gitolite server
+
+# Allow download of tar.gz, tar.bz2 and zip-files
+#snapshots=tar.gz tar.bz2 zip
+snapshots=tar.gz zip
+
+##
+## List of common mimetypes
+##
+
+mimetype.gif=image/gif
+mimetype.html=text/html
+mimetype.jpg=image/jpeg
+mimetype.jpeg=image/jpeg
+mimetype.pdf=application/pdf
+mimetype.png=image/png
+mimetype.svg=image/svg+xml
+
+# Show owner on index page
+enable-index-owner=1
+
+# Enable syntax highlighting (requires the highlight package)
+# source-filter=/usr/lib/cgit/filters/syntax-highlighting.sh
+
+# through the right converters
+about-filter=/usr/lib/cgit/filters/about-formatting.sh
+
+readme=:README.md
+readme=:readme.md
+readme=:README.mkd
+readme=:readme.mkd
+readme=:README.rst
+readme=:readme.rst
+readme=:README.html
+readme=:readme.html
+readme=:README.htm
+readme=:readme.htm
+readme=:README.txt
+readme=:readme.txt
+readme=:README
+readme=:readme
+readme=:INSTALL.md
+readme=:install.md
+readme=:INSTALL.mkd
+readme=:install.mkd
+readme=:INSTALL.mkd
+readme=:install.mkd
+readme=:INSTALL.rst
+readme=:install.rst
+readme=:INSTALL.html
+readme=:install.html
+readme=:INSTALL.htm
+readme=:install.htm
+readme=:INSTALL.txt
+readme=:install.txt
+readme=:INSTALL
+readme=:install
+
+##
+## List of repositories.
+## PS: Any repositories listed when section is unset will not be
+##     displayed under a section heading
+## PPS: This list could be kept in a different file (e.g. '/etc/cgitrepos')
+##      and included like this:
+##        include=/etc/cgitrepos
+##
+
+enable-git-config=1
+enable-gitweb-owner=1
+remove-suffix=1
+project-list=/var/lib/git/projects.list
+scan-path=/var/lib/git/repositories
+
+#repo.url=testing
+#repo.path=/var/lib/git/repositories/testing.git
+#repo.desc=This is a testing repository.
+#repo.owner=TestOwner
